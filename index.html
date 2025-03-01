@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div id="welcome-screen">
+        <div class="welcome-card">
+            <h2>Welcome!</h2>
+            <p>Please enter your name to continue</p>
+            <input type="text" id="nameInput" placeholder="Your name">
+            <button id="continueBtn">Continue</button>
+        </div>
+    </div>
+
+    <div id="dashboard">
+        <div class="header">
+            <h2>Hi, <span class="userName"></span>!</h2>
+        </div>
+        <!-- Desktop View -->
+        <div class="desktop-view">
+            <div class="sidebar">
+                <div class="sidebar-option">Dashboard</div>
+                <div class="sidebar-option">Profile</div>
+                <div class="sidebar-option">texts</div>
+                <div class="sidebar-option">settings</div>
+                <div class="sidebar-option desktop-logout">Logout</div>
+            </div>
+            <div class="content">
+                <h3>Welcome to your Dashboard</h3>
+                <p>Select an option from the sidebar to get started.</p>
+            </div>
+        </div>
+
+        <!-- Mobile View -->
+        <div class="mobile-view">
+            <div class="mobile-header">
+                <h2>Hi, <span class="userName"></span>!</h2>
+                <div class="hamburger" id="menuBtn">
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                </div>
+            </div>
+
+            <div class="menu-overlay" id="menuOverlay"></div>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <div class="menu-option">Dashboard</div>
+                <div class="menu-option">Profile</div>
+                <div class="menu-option">Settings</div>
+                <div class="menu-option">Messages</div>
+                <div class="menu-option mobile-logout">Logout</div>
+            </div>
+
+            <div class="mobile-content">
+                <h3>Welcome to your Dashboard</h3>
+                <p>Click the menu icon to explore available options.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Animated Cursor -->
+    <div class="animated-cursor" id="animatedCursor"></div>
+
+    <script src="script.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+</html>
