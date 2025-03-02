@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Dashboard</title>
@@ -17,7 +12,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -26,46 +20,62 @@
         }
 
         #welcome-screen {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f2f5;
-        }
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111113; /* Dark background */
+}
 
-        .welcome-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            width: 90%;
-            max-width: 350px;
-        }
+.welcome-card h2,
+#welcome-screen .welcome-card p {
+    color: white; /* White text for heading and paragraph */
+}
 
-        input {
-            padding: 0.8rem;
-            margin: 1rem 0;
-            width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-        }
+.welcome-card {
+    background: rgba(37, 36, 36, 0.92); /* Darker, semi-transparent background for card */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 350px;
+}
 
-        button {
-            padding: 0.8rem 1rem;
-            background-color: #1a73e8;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-        }
+input {
+    padding: 0.8rem;
+    margin: 1rem 0;
+    width: 100%;
+    border: 2px solid #5a5a5a; /* Slightly lighter border for better contrast */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #7599cf; 
+    color: white; /* White text in the input field */
+    cursor: none;
+}
 
-        button:hover {
-            background-color: #1557b0;
-        }
+input::placeholder {
+    color: black; /* Black placeholder text */
+}
+
+button {
+    padding: 0.8rem 1rem;
+    background: linear-gradient(135deg, #1a73e8, #4778b8); /* Blue gradient for button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.3s ease; /* Smooth background transition */
+    cursor: none;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1a73e8, #4f94e8); /* Slightly lighter gradient on hover */
+}
+
+        
 
         #dashboard {
             display: none;
@@ -347,7 +357,7 @@
     <div id="welcome-screen">
         <div class="welcome-card">
             <h2>Welcome!</h2>
-            <p>Please enter your name to continue</p>
+            <p>What shall we call you?</p>
             <input type="text" id="nameInput" placeholder="Your name">
             <button id="continueBtn">Continue</button>
         </div>
@@ -481,3 +491,4 @@
 </body>
       <!-- made by PARTH.K😉 -->
 </html>
+
